@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CryptoMMS.iml" filepath="$PROJECT_DIR$/CryptoMMS.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cryptomms.iml" filepath="$PROJECT_DIR$/cryptomms.iml" />
     </modules>
   </component>
 </project>
