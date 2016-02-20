@@ -93,6 +93,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(in);
     }
 
+    public void openOptions(View view) {
+        Intent in = new Intent(this, OptionsMenu.class);
+        startActivity(in);
+    }
+
     public void selfDestruct(View view) {
         //non
     }

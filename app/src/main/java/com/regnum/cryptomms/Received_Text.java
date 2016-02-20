@@ -30,7 +30,7 @@ public class Received_Text extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-
+        setContentView(R.layout.recieved);
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         mClient.connect();

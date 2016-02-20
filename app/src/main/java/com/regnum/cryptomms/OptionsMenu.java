@@ -9,10 +9,9 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 /**
- * Created by shane on 2/20/16.
+ * Created by Jared on 2/20/16.
  */
-public class Options extends Activity {
-
+public class OptionsMenu extends Activity {
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -31,13 +30,13 @@ public class Options extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-
+        setContentView(R.layout.options);
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         mClient.connect();
         Action viewAction = Action.newAction(
                 Action.TYPE_VIEW, // TODO: choose an action type.
-                "Options Page", // TODO: Define a title for the content shown.
+                "Received_Text Page", // TODO: Define a title for the content shown.
                 // TODO: If you have web page content that matches this app activity's content,
                 // make sure this auto-generated web page URL is correct.
                 // Otherwise, set the URL to null.
@@ -56,7 +55,7 @@ public class Options extends Activity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         Action viewAction = Action.newAction(
                 Action.TYPE_VIEW, // TODO: choose an action type.
-                "Options Page", // TODO: Define a title for the content shown.
+                "Received_Text Page", // TODO: Define a title for the content shown.
                 // TODO: If you have web page content that matches this app activity's content,
                 // make sure this auto-generated web page URL is correct.
                 // Otherwise, set the URL to null.

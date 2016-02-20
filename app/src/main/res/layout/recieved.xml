@@ -10,6 +10,7 @@
 
         <Spinner
             android:layout_width="match_parent"
+            android:contextClickable="true"
             android:layout_height="100px"></Spinner>
 
 
@@ -17,11 +18,15 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="35dp"
         android:textAlignment="center"
         android:textSize="24dp"
-        android:layout_marginBottom="100dp"
-        android:text="Hi everybody!"/>
+        android:text="Enter your message below"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginTop="300dp"
+        android:layout_height="45dp" />
 
     <Button
         android:layout_width="125dp"
