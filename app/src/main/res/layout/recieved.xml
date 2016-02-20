@@ -18,7 +18,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:hint="Messages Come In Here" />
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:layout_marginBottom="100dp"
+        android:text="Hi everybody!"/>
 
     <Button
         android:layout_width="125dp"
