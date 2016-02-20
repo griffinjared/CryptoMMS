@@ -22,10 +22,18 @@
 
             android:textSize="60px"/>
         <Button
-            android:layout_width="300px"
-            android:layout_height="100px"/>
-
-
-
+            android:layout_width="500px"
+            android:layout_height="100px"
+            android:layout_gravity="center_horizontal"
+            android:hint="RECEIVED TEXT"
+            android:textSize="60px"
+            />
+        <Button
+        android:layout_width="300px"
+        android:layout_height="100px"
+        android:layout_gravity="center_horizontal"
+        android:hint="Options"
+        android:textSize="60px"
+        />
 
 </LinearLayout>
