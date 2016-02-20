@@ -16,7 +16,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 /**
  * Created by shane on 2/20/16.
  */
-class Send extends Activity {
+public class Send extends Activity {
 
 
     /**
@@ -35,8 +35,7 @@ class Send extends Activity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         setContentView(R.layout.send);
         mClient = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-        phone=(EditText) findViewById(R.id.phoneNum);
-        message=(EditText) findViewById(R.id.message);
+
     }
 
     @Override
@@ -80,14 +79,19 @@ class Send extends Activity {
     }
 
     public void sendMess(View view){
+        phone=(EditText) findViewById(R.id.phoneNum);
+        message=(EditText) findViewById(R.id.message);
         System.out.println("test");
         String ph = phone.getText().toString();
         String mess = message.getText().toString();
-
+        System.out.println(ph.length());
         if(ph.length()==10){
+            System.out.println("length is good");
             sendSMS(ph,mess);
         }
-        throw new IllegalArgumentException("Not Enough Digits");// TODO: 2/20/16
+        else {
+            throw new IllegalArgumentException("Not Enough Digits");// TODO: 2/20/16
+        }
 
 
     }
