@@ -21,7 +21,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import static android.support.v4.app.ActivityCompat.startActivity;
 
 public class MainActivity extends AppCompatActivity {
-    public final static String EXTRA_MESSAGE="com.regnum.cryptomms";
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -32,16 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button b = (Button) findViewById(R.id.but);
-        b.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
 
-                startActivity(new Intent(new Cont(), Send.class));//working on this
-
-            }
-
-
-        });
 
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -90,14 +81,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void sendMessage(View view){
 
-        Intent intent = new Intent(this,DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
+
+       Intent in = new Intent(this,Send.class);
+
+      startActivity(in);
 
     }
     public void selfDestruct(View view) {
-        //non Todo
+        //non
     }
 
 }
