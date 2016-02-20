@@ -27,7 +27,9 @@
             android:layout_height="75dp"
             android:layout_gravity="center_horizontal"
             android:hint="RECEIVED TEXT"
+            android:onClick="recieveMessage"
             android:textSize="30dp"
+            android:id="@+id/recievedBut"
             />
         <Button
         android:layout_width="300dp"

@@ -34,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         mClient = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -80,23 +78,28 @@ public class MainActivity extends AppCompatActivity {
         AppIndex.AppIndexApi.end(mClient, viewAction);
         mClient.disconnect();
     }
-    public void sendMessage(View view){
+
+    public void sendMessage(View view) {
 
 
-       Intent in = new Intent(this,Send.class);
+        Intent in = new Intent(this, Send.class);
 
-      startActivity(in);
+        startActivity(in);
 
     }
+
+    public void recieveMessage(View view) {
+        Intent in = new Intent(this, Received_Text.class);
+        startActivity(in);
+    }
+
     public void selfDestruct(View view) {
         //non
     }
-    public void textRecieved(View view){
-       Intent in = new Intent(this, Received_Text.class);
+
+    public void textRecieved(View view) {
+        Intent in = new Intent(this, Received_Text.class);
         startActivity(in);
-
-
-
 
 
     }

@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100px">
+
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="100px"></Spinner>
 
 
     </LinearLayout>
+
     <TextView
-        android:hint="Messages Come In Here"
         android:layout_width="match_parent"
-        android:layout_height="800px"/>
+        android:layout_height="400dp"
+        android:hint="Messages Come In Here" />
+
     <Button
-        android:layout_width="250px"
-        android:layout_height="100px"
-        android:hint="Contacts"/>
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:hint="Contacts" />
 
 
 </LinearLayout>
