@@ -91,5 +91,14 @@ public class MainActivity extends AppCompatActivity {
     public void selfDestruct(View view) {
         //non
     }
+    public void textRecieved(View view){
+       Intent in = new Intent(this, Received_Text.class);
+        startActivity(in);
+
+
+
+
+
+    }
 
 }
