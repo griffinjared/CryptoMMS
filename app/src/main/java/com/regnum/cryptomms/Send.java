@@ -25,6 +25,7 @@ class Send extends Activity {
      */
     private GoogleApiClient mClient;
     private EditText phone;
+    private EditText message;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +36,7 @@ class Send extends Activity {
         setContentView(R.layout.send);
         mClient = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
         phone=(EditText) findViewById(R.id.phoneNum);
-
+        message=(EditText) findViewById(R.id.message);
     }
 
     @Override
@@ -80,12 +81,12 @@ class Send extends Activity {
 
     public void sendMess(View view){
         String ph = phone.getText().toString();
-        String mess = findViewById(R.id.message).toString();
+        String mess = message.getText().toString();
 
         if(ph.length()==10){
             sendSMS(ph,mess);
         }
-
+        throw new IllegalArgumentException("Not Enough Digits");// TODO: 2/20/16
 
 
     }
