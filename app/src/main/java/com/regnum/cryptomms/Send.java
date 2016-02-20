@@ -92,7 +92,7 @@ class Send extends Activity {
     }
 
     public void sendSMS(String phoneNum,String message){
-        System.out.println("test");
+        System.out.println("test1");
         PendingIntent pi = PendingIntent.getActivity(this,0,new Intent(this,Send.class),0);
         SmsManager sms = SmsManager.getDefault();
         sms.sendTextMessage(phoneNum,null,message,pi,null);
