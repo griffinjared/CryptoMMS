@@ -16,7 +16,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 /**
  * Created by shane on 2/20/16.
  */
-class Send extends Activity {
+public class Send extends Activity {
 
 
     /**
@@ -27,7 +27,7 @@ class Send extends Activity {
     private EditText phone;
     private EditText message;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.send);
 
@@ -80,14 +80,16 @@ class Send extends Activity {
     }
 
     public void sendMess(View view){
-        System.out.println("test");
+
         String ph = phone.getText().toString();
         String mess = message.getText().toString();
 
         if(ph.length()==10){
             sendSMS(ph,mess);
+        }else{
+            throw new IllegalArgumentException("Not Enough Digits");// TODO: 2/20/16
         }
-        throw new IllegalArgumentException("Not Enough Digits");// TODO: 2/20/16
+
 
 
     }
