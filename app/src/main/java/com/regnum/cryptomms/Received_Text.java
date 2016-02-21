@@ -71,11 +71,11 @@ public class Received_Text extends Activity {
 
     public void addKey(View view){
         Intent in = new Intent(this,AddKey.class);
-
-
-
-
         startActivity(in);
+
+
+
+
 
     }
 
