@@ -31,11 +31,14 @@
             android:text="USE  KEY"/>
 
         <Button
+
             android:layout_width="128dp"
             android:layout_height="wrap_content"
             android:text="Add Key"
             android:id="@+id/button"
-            android:layout_gravity="bottom"/>
+            android:layout_gravity="bottom"
+            android:onClick="addKey"
+            />
 
 
     </LinearLayout>

@@ -1,10 +1,9 @@
 package com.regnum.cryptomms;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.EditText;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -13,17 +12,22 @@ import com.google.android.gms.common.api.GoogleApiClient;
 /**
  * Created by shane on 2/20/16.
  */
-public class Received_Text extends Activity {
+public class AddKey extends Activity {
+
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient mClient;
-
+    private EditText code;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        code=(EditText) findViewById(R.id.message);
+        EditText te = new EditText(new Cont());//may not work
+        te.setId(R.id.textView);
+        te.setText(code.getText());
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         mClient = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -32,13 +36,13 @@ public class Received_Text extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-        setContentView(R.layout.recieved);
+
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         mClient.connect();
         Action viewAction = Action.newAction(
                 Action.TYPE_VIEW, // TODO: choose an action type.
-                "Received_Text Page", // TODO: Define a title for the content shown.
+                "AddKey Page", // TODO: Define a title for the content shown.
                 // TODO: If you have web page content that matches this app activity's content,
                 // make sure this auto-generated web page URL is correct.
                 // Otherwise, set the URL to null.
@@ -57,7 +61,7 @@ public class Received_Text extends Activity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         Action viewAction = Action.newAction(
                 Action.TYPE_VIEW, // TODO: choose an action type.
-                "Received_Text Page", // TODO: Define a title for the content shown.
+                "AddKey Page", // TODO: Define a title for the content shown.
                 // TODO: If you have web page content that matches this app activity's content,
                 // make sure this auto-generated web page URL is correct.
                 // Otherwise, set the URL to null.
@@ -68,17 +72,4 @@ public class Received_Text extends Activity {
         AppIndex.AppIndexApi.end(mClient, viewAction);
         mClient.disconnect();
     }
-
-    public void addKey(View view){
-        Intent in = new Intent(this,AddKey.class);
-
-
-
-
-        startActivity(in);
-
-    }
-
-
-
 }
