@@ -13,10 +13,11 @@ import java.util.ArrayList;
  */
 public class Keys extends ContentProvider {
 
-    private ArrayList<String> keys = new ArrayList<String>();
-
+    private ArrayList<String> privateKeys = new ArrayList<String>();
+    private ArrayList<String> publicKeys = new ArrayList<String>();
     public Keys(){
-        keys=null;
+        privateKeys =null;
+        publicKeys=null;
     }
 
     @Override
@@ -52,11 +53,17 @@ public class Keys extends ContentProvider {
         return 0;
     }
 
-    public String getKey(int index){
-        return keys.get(index);
+    public String getPublic(int index){
+        return publicKeys.get(index);
     }
-    public void addKey(String key){
-        keys.add(key);
+    public void addPublic(String key){
+        publicKeys.add(key);
+    }
+    public String getPrivate(int index){
+        return privateKeys.get(index);
+    }
+    public void addPrivate(String key){
+        privateKeys.add(key);
     }
 
 

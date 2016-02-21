@@ -4,34 +4,40 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100px">
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:contextClickable="true"
-            android:layout_height="100px"></Spinner>
-
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:textAlignment="center"
-        android:textSize="24dp"
-        android:text="Enter your message below"/>
-
     <EditText
         android:layout_width="match_parent"
         android:layout_marginTop="300dp"
         android:layout_height="45dp" />
 
-    <Button
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:hint="Contacts" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
 
+        <Button
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:hint="Contacts"
+            android:id="@+id/button2"
+            android:text="CONTACTS"
+            android:layout_gravity="bottom"/>
+
+        <Button
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:hint="Contacts"
+            android:layout_gravity="bottom"
+            android:text="USE  KEY"/>
+
+        <Button
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:text="Add Key"
+            android:id="@+id/button"
+            android:layout_gravity="bottom"/>
+
+
+    </LinearLayout>
 
 </LinearLayout>
