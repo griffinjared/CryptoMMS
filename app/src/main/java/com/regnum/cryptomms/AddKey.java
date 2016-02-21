@@ -21,13 +21,13 @@ public class AddKey extends Activity {
      */
     private GoogleApiClient mClient;
     private EditText code;
+    private EditText message;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         code=(EditText) findViewById(R.id.message);
-        EditText te = new EditText(new Cont());//may not work
-        te.setId(R.id.textView);
-        te.setText(code.getText());
+        message=(EditText) findViewById(R.id.textView);
+        message.setText(code.getText().toString());
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         mClient = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
