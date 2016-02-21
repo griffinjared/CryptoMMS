@@ -3,6 +3,8 @@ package com.regnum.cryptomms;
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Telephony;
+import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -17,10 +19,12 @@ public class Received_Text extends Activity {
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient mClient;
+    private TextView msg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        msg = (TextView) findViewById(R.id.messageDetails);
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -45,6 +49,8 @@ public class Received_Text extends Activity {
                 Uri.parse("android-app://com.regnum.cryptomms/http/host/path")
         );
         AppIndex.AppIndexApi.start(mClient, viewAction);
+
+//        System.out.println(Telephony.Sms.Intents.SMS_RECEIVED_ACTION);
     }
 
     @Override
@@ -65,5 +71,9 @@ public class Received_Text extends Activity {
         );
         AppIndex.AppIndexApi.end(mClient, viewAction);
         mClient.disconnect();
+    }
+
+    public void getMessage() {
+
     }
 }
